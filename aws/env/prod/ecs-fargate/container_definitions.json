@@ -1,0 +1,29 @@
+[
+    {
+      "cpu": 256,
+      "image": "jefersonaraujo/frontend:latest",
+      "memory": 256,
+      "name": "frontend",
+      "networkMode": "awsvpc",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80
+        }
+      ],
+      "environment": [
+        {
+          "name": "AWESOME_ENV_VAR",
+          "value": ""
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "frontend-log",
+          "awslogs-region": "us-west-2",
+          "awslogs-stream-prefix": "frontend-iac"
+        }
+      }
+    }
+  ]
