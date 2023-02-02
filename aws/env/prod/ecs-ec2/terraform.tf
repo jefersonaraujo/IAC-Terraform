@@ -3,7 +3,7 @@ data "template_file" "container_definitions" {
 }
 
 module "ecs" {
-  source           = "../../modules/ecs"
+  source           = "../../modules/ecs_ec2"
   create_cluster   = true
   app_count        = 1
   fargate_cpu      = 256
