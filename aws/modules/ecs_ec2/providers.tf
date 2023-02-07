@@ -6,11 +6,11 @@ terraform {
     }
   }
 
-  
+
 }
 
 provider "aws" {
-  region  = var.region
-  profile    = "terraform"
+  region  = "us-west-2"
+  profile    = "jeferson"
 
 }
